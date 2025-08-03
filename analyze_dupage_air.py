@@ -4,7 +4,7 @@ import glob
 import matplotlib.pyplot as plt
 
 # 1. Load all CSVs matching the pattern
-files = sorted(glob.glob("data/annual_aqi_by_county_*.csv"))
+files = sorted(glob.glob("data/air_quality/annual_aqi_by_county_*.csv"))
 
 # 2. Extract only rows for Illinois / DuPage
 df_list = []
@@ -20,7 +20,7 @@ all_years = pd.concat(df_list).sort_values(by="Year")
 all_years.set_index("Year", inplace=True)
 
 # Optional: Save to CSV
-all_years.to_csv("data/dupage_aqi_summary.csv", index=True)
+all_years.to_csv("data/air_quality/dupage_aqi_summary.csv", index=True)
 
 # 5. Plotting
 
@@ -34,7 +34,7 @@ plt.title("DuPage County AQI Category Days (2005–2024)")
 plt.ylabel("Number of Days")
 plt.xlabel("Year")
 plt.tight_layout()
-plt.savefig("outputs/dupage_aqi_categories.pdf")
+plt.savefig("outputs/dupage_aqi_categories.png")
 #plt.show()
 
 ## b. Max, 90th percentile, and Median AQI
@@ -48,7 +48,7 @@ years = all_years.index.tolist()
 plt.xticks(ticks=years, labels=[str(y) for y in years], rotation=45)  # or rotation=0 if preferred
 
 plt.tight_layout()
-plt.savefig("outputs/dupage_aqi_stats.pdf")
+plt.savefig("outputs/dupage_aqi_stats.png")
 #plt.show()
 
 ## c. Days by pollutant
@@ -57,6 +57,6 @@ all_years[pollutants].plot(kind='bar', stacked=True, figsize=(14,6))
 plt.title("Pollutant-Specific AQI Days in DuPage County")
 plt.ylabel("Days")
 plt.tight_layout()
-plt.savefig("outputs/dupage_pollutant_days.pdf")
+plt.savefig("outputs/dupage_pollutant_days.png")
 #plt.show()
 

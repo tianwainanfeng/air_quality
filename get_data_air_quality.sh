@@ -4,8 +4,8 @@
 base_url="https://aqs.epa.gov/aqsweb/airdata"
 
 work_area="${PWD}"
-mkdir -p data
-cd data || { echo "Failed to enter data directory"; exit 1; }
+mkdir -p data/air_quality
+cd data/air_quality || { echo "Failed to enter data/air_quality directory"; exit 1; }
 
 # download the zip files for each year
 for year in $(seq 2005 2024); do

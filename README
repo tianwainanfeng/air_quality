@@ -3,6 +3,6 @@
 
 The Air Quality data can be downloaded from: https://aqs.epa.gov/aqsweb/airdata
 
-The temperature data used here comes from the [NOAA Global Summary of the Day (GSOD)](https://www.ncei.noaa.gov/data/global-summary-of-the-day/) dataset, provided by the National Centers for Environmental Information (NCEI).
+The temperature data and precipitation data used here comes from the [NOAA Global Summary of the Day (GSOD)](https://www.ncei.noaa.gov/data/global-summary-of-the-day/) dataset, provided by the National Centers for Environmental Information (NCEI).
 
 

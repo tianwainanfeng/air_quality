@@ -1,3 +1,5 @@
+# analyze_dupage_temp.py
+
 import pandas as pd
 import os
 import numpy as np
@@ -100,7 +102,7 @@ plt.xticks(df_season['YEAR'].astype(int))
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("outputs/seasonal_avg_temp.png")
+plt.savefig("outputs/dupage_seasonal_avg_temp.png")
 plt.close()
 
 # 3. Seasonal max temp
@@ -115,7 +117,7 @@ plt.xticks(df_season['YEAR'].astype(int))
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("outputs/seasonal_max_temp.png")
+plt.savefig("outputs/dupage_seasonal_max_temp.png")
 plt.close()
 
 # 4. Seasonal min temp
@@ -130,5 +132,5 @@ plt.xticks(df_season['YEAR'].astype(int))
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("outputs/seasonal_min_temp.png")
+plt.savefig("outputs/dupage_seasonal_min_temp.png")
 plt.close()
